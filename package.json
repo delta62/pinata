@@ -1,0 +1,23 @@
+{
+  "name": "pinata",
+  "version": "0.1.0",
+  "description": "",
+  "main": "style.css",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delta62/pinata.git"
+  },
+  "author": "",
+  "license": "proprietary",
+  "bugs": {
+    "url": "https://github.com/delta62/pinata/issues"
+  },
+  "homepage": "https://github.com/delta62/pinata",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.12.0"
+  }
+}

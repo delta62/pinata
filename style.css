@@ -7,3 +7,231 @@ Description: Responsive eCommerce site for Whata Pinata
 Version: 0.0
 Tags: white, responsive-layout, custom-header, custom-menu, featured-images, flexible-header
 */
+@font-face {
+  font-family: 'Bowlby One';
+}
+body {
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bowlby One';
+}
+.group:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+.primary-nav {
+  font-family: 'Bowlby One';
+}
+.primary-nav .menu-item {
+  margin: .5em;
+}
+.primary-nav .menu-item:nth-child(1) a {
+  color: #f78e1e;
+}
+.primary-nav .menu-item:nth-child(2) a {
+  color: #4772c9;
+}
+.primary-nav .menu-item:nth-child(3) a {
+  color: #dc3e54;
+}
+.primary-nav .menu-item:nth-child(4) a {
+  color: #71a04e;
+}
+.primary-nav .menu-item a {
+  text-decoration: none;
+}
+.primary-nav .menu-item span {
+  line-height: 8em;
+}
+.primary-nav .menu-item img {
+  vertical-align: middle;
+  width: 8em;
+}
+.content {
+  margin: 2em;
+}
+.banner-images .rotator {
+  height: 24em;
+  position: relative;
+  overflow: hidden;
+}
+.banner-images .rotator a {
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.banner-images .rotator a img {
+  position: absolute;
+}
+.banner-images .rotator a img:empty {
+  left: 50%;
+  top: 50%;
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.banner-images div.banner-image-text {
+  position: absolute;
+}
+.banner-images .banner-nav {
+  float: left;
+  left: 50%;
+  position: relative;
+}
+.banner-images .banner-nav ol {
+  float: left;
+  left: -50%;
+  list-style-type: none;
+  padding: 0;
+  position: relative;
+}
+.banner-images .banner-nav li {
+  float: left;
+  padding: .3em;
+}
+.banner-images .banner-nav li a {
+  display: inline-block;
+  background-color: #f78e1e;
+  border: 0.2em solid #f78e1e;
+  border-radius: 2em;
+  box-shadow: 0 0 0 0.2em #f78e1e;
+  height: 2em;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  width: 2em;
+}
+.banner-images .banner-nav li a.active {
+  background-color: #dc3e54;
+  border-color: #ffffff;
+  box-shadow: 0 0 0 0.2em #dc3e54;
+}
+.promo {
+  margin-bottom: 2em;
+}
+.promo .promo-title {
+  text-align: center;
+}
+.promo .promo-item {
+  box-sizing: border-box;
+  float: left;
+  line-height: 200%;
+  padding: 2em 0;
+  text-align: center;
+  width: 50%;
+}
+.promo .promo-item:nth-child(2n) {
+  clear: left;
+  padding-right: 2em;
+}
+.promo .promo-item:nth-child(2n + 1) {
+  padding-left: 2em;
+}
+.promo .promo-item img {
+  width: 100%;
+  max-width: 100%;
+}
+.promo:after {
+  clear: both;
+  content: "";
+  display: table;
+  height: 0;
+  width: 0;
+}
+.promo.red {
+  color: #dc3e54;
+}
+.promo.green {
+  color: #71a04e;
+}
+.sidebar-footer .socialmedia-buttons {
+  text-align: center;
+}
+.site-footer {
+  background-color: #784d82;
+  border-top: 1px solid #000000;
+  color: #ffffff;
+  padding: 1em;
+}
+.site-footer a {
+  color: #ffffff;
+}
+@media screen and (max-width: 640px) {
+  .site-header {
+    overflow: hidden;
+  }
+  .site-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+  }
+  .site-logo img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .primary-nav {
+    float: left;
+    left: 50%;
+    position: relative;
+  }
+  .primary-nav ul {
+    float: left;
+    left: -50%;
+    position: relative;
+  }
+  .primary-nav ul .menu-item {
+    float: left;
+  }
+  .primary-nav ul .menu-item a span {
+    display: none;
+  }
+  .site-name,
+  .site-tagline {
+    display: none;
+  }
+  .banner-next,
+  .banner-prev {
+    display: none;
+  }
+  .sidebar-footer {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 4em;
+  }
+  .sidebar-footer .widgettitle {
+    display: none;
+  }
+  .site-footer ul {
+    margin-bottom: 2em;
+  }
+  .site-footer ul li {
+    float: left;
+    width: 25%;
+  }
+  .site-footer .copyright {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+@media screen and (orientation: portrait) {
+  .banner-images img {
+    max-width: 100%;
+  }
+}
+@media screen and (orientation: landscape) {
+  .banner-images img {
+    max-height: 100%;
+  }
+}
