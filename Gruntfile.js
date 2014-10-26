@@ -8,11 +8,18 @@ module.exports = function(grunt) {
           'style.css': 'style.less'
         }
       }
+    },
+    watch: {
+      styles: {
+        files: '*.less',
+        tasks: 'less'
+      }
     }
   });
 
   // Load tasks
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Register tasks
   grunt.registerTask('default', ['less']);
