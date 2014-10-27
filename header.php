@@ -4,10 +4,8 @@
     <meta charset="<?php bloginfo('charset'); ?>" />
     <title><?php wp_title() . ' | ' . bloginfo('name'); ?></title>
     <?php wp_head(); ?>
-    <link href="<?php echo get_template_directory_uri(); ?>/style.less"
-          rel="stylesheet/less"
-          type="text/css" />
-    <script src="<?php echo get_template_directory_uri() ?>/js/less.js"></script>
+    <link href="<?php echo get_template_directory_uri(); ?>/style.css"
+          rel="stylesheet" />
 </head>
 <body <?php body_class(); ?>>
     <section class="sidebar-top">
@@ -31,7 +29,7 @@
                 wp_nav_menu(array(
                     'theme_location'  => 'primary-nav',
                     'container'       => 'nav',
-                    'container_class' => 'primary-nav group',
+                    'container_class' => 'primary-nav centering group',
                     'walker'          => new Pinata_Nav_Menu(),
                     'link_before'     => '<span>',
                     'link_after'      => '</span>'
