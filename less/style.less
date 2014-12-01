@@ -1,9 +1,9 @@
 /*
 Theme Name: Piñata
-Theme URI: http://github.com/delta62/pineapple
+Theme URI: http://github.com/delta62/pinata
 Author: Sam Noedel
 Author URI: https://samnoedel.com
-Description: Responsive eCommerce site for Whata Pinata
+Description: Responsive eCommerce site for Wordpress
 Version: 0.0
 Tags: white, responsive-layout, custom-header, custom-menu, featured-images, flexible-header
 */
@@ -219,8 +219,6 @@ h1, h2, h3, h4, h5, h6 {
     color: @white;
     padding: 1em;
 
-    
-
     a {
         color: @white;
     }
@@ -246,10 +244,8 @@ h1, h2, h3, h4, h5, h6 {
         .menu-item {
             float: left;
 
-            a {
-                span {
-                    display: none;
-                }
+            a span {
+                display: none;
             }
         }
     }
@@ -292,4 +288,6 @@ h1, h2, h3, h4, h5, h6 {
         text-align: center;
     }
 }
+
+@import 'socialmedia.less';
 

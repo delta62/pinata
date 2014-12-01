@@ -58,3 +58,6 @@ register_sidebar(array(
     'id'    => 'pinata_sidebar_left',
     'class' => 'sidebar-left'
 ));
+
+remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
