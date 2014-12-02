@@ -2,3 +2,4 @@
 *.swp
 *.css
 node_modules/
+*.swo

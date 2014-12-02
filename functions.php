@@ -59,5 +59,23 @@ register_sidebar(array(
     'class' => 'sidebar-left'
 ));
 
+function pinata_image_slider() {
+    print '<image-slider></image-slider>';
+}
+
+add_action('woocommerce_before_single_product_summary', 'pinata_image_slider', 20);
+
+function pinata_javascript_required_message() {
+    print __('Javascript is required');
+}
+
+add_action('pinata_javascript_required', 'pinata_javascript_required_message', 10);
+
+// Don't try to render a sidebar in the product loop
 remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+// Remove the result count from loop output
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+// Remove the breadcrumb from displaying on the product loop
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+// Remove "Read More" link in product loop (Add to cart button)
+remove_action( 'woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10 );
