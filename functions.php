@@ -19,10 +19,8 @@ function pinata_register_menus() {
 }
 add_action('init', 'pinata_register_menus');
 
-
 // Custom header image
 add_theme_support('custom-header');
-
 
 // Custom sidebars
 register_sidebar(array(

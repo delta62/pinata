@@ -1,2 +1,1 @@
-console.log('hi');
-console.log(require);
+define(['slider/slider'], function() { });
