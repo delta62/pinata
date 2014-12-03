@@ -1,5 +1,5 @@
 <!doctype html>
-<html <?php language_attributes(); ?> ng-app="pinata" ng-strict-di>
+<html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo('charset'); ?>" />
     <title><?php wp_title() . ' | ' . bloginfo('name'); ?></title>

@@ -4,7 +4,6 @@
 require_once(dirname(__FILE__) . '/inc/pinata-nav-menu.php');
 require_once(dirname(__FILE__) . '/inc/scripts.php');
 
-
 // WooCommerce support
 remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper');
 remove_action('woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end');

@@ -37,7 +37,13 @@ function pinata_enqueue_scripts() {
         'baseUrl' => $app_path,
         'deps'    => array('main'),
         'paths'   => array(
-            'angular' => 'lib/angular/angular'
+            'angular' => 'lib/angular/angular',
+            'text'    => 'lib/requirejs-text/text'
+        ),
+        'shim' => array(
+            'angular' => array(
+                'exports' => 'angular'
+            )
         )
     ));
     wp_enqueue_script('requirejs');
