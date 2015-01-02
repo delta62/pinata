@@ -195,6 +195,14 @@ div.banner-image-text {
         height: 100%;
     }
 
+    @supports (object-fit: cover) {
+        .promo img {
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+        }
+    }
+
     .promo-item {
         box-sizing: border-box;
         float: left;
