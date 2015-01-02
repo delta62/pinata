@@ -20,8 +20,11 @@ module.exports = function(grunt) {
     },
     watch: {
       styles: {
-        files: 'less/*.less',
-        tasks: 'less'
+        files: 'src/less/*.less',
+        tasks: 'default',
+        options: {
+          atBegin: true
+        }
       }
     },
     compress: {

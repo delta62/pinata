@@ -25,29 +25,38 @@ Tags: white, responsive-layout, custom-header, custom-menu, featured-images, fle
 body {
     background-color: @purple;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Bowlby One';
 }
 
-.group:after {
-    clear: both;
-    content: "";
-    display: table;
+.group() {
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+    }
 }
 
-.centering {
+.group {
+    .group();
+}
+
+.center() {
     float: left;
-    left: 50%;
     position: relative;
+    right: -50%;
 
     & > * {
         float: left;
         left: -50%;
         position: relative;
+    }
 }
+
+.center {
+    .center();
 }
 
 .page {
@@ -60,40 +69,33 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .primary-nav {
-    font-family: 'Bowlby One';
-
     .menu-item {
-        margin: .5em;
+        margin: .2em;
 
         &:nth-child(1) a {
             color: @gold;
-    }
+        }
 
-    &:nth-child(2) a {
-        color: @blue;
-    }
+        &:nth-child(2) a {
+            color: @blue;
+        }
 
-    &:nth-child(3) a {
-        color: @red;
-    }
+        &:nth-child(3) a {
+            color: @red;
+        }
 
-    &:nth-child(4) a {
-        color: @green;
-    }
+        &:nth-child(4) a {
+            color: @green;
+        }
 
-    a {
-        text-decoration: none;
-    }
+        a {
+            text-decoration: none;
+        }
 
-    span {
-        line-height: 8em;
+        img {
+            width: 4em;
+        }
     }
-
-    img {
-        vertical-align: middle;
-        width: 8em;
-    }
-}
 }
 
 .content {
@@ -180,52 +182,63 @@ div.banner-image-text {
 
     .promo-title {
         text-align: center;
-}
-
-.promo-item {
-    box-sizing: border-box;
-    float: left;
-    line-height: 200%;
-    padding: 2em 0;
-    text-align: center;
-    width: 50%;
-
-    &:nth-child(2n) {
-        clear: left;
-        padding-right: 2em;
     }
 
-    &:nth-child(2n + 1) {
-        padding-left: 2em;
+    .promo-thumb {
+        height: 6em;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 6em;
     }
 
     img {
-        width: 100%;
-        max-width: 100%;
+        height: 100%;
     }
-}
 
-&:after {
-    clear: both;
-    content: "";
-    display: table;
-    height: 0;
-    width: 0;
-}
+    .promo-item {
+        box-sizing: border-box;
+        float: left;
+        padding: 1em .5em;
+        text-align: center;
+        width: 50%;
 
-&.red {
-    color: @red;
-}
+        &.promo-text {
+            clear: left;
+            padding: 1em 0;
+            width: 100%;
+        }
+    }
 
-&.green {
-    color: @green;
-}
+    .promo-caption {
+        display: none;
+    }
+
+    &:after {
+        clear: both;
+        content: "";
+        display: table;
+        height: 0;
+        width: 0;
+    }
+
+    &.red {
+        color: @red;
+    }
+
+    &.green {
+        color: @green;
+    }
 }
 
 .sidebar-footer {
     .socialmedia-buttons {
         text-align: center;
-}
+
+        img {
+            height: 5em;
+            width: 5em;
+        }
+    }
 }
 
 .site-footer {
@@ -236,7 +249,7 @@ div.banner-image-text {
 
     a {
         color: @white;
-}
+    }
 }
 
 .site-header {
@@ -251,28 +264,25 @@ div.banner-image-text {
     img {
         width: 100%;
         max-width: 100%;
-}
+    }
 }
 
 .primary-nav {
+    .center();
+
     ul {
         .menu-item {
             float: left;
 
             a span {
                 display: none;
+            }
         }
     }
-}
 }
 
 .site-name,
 .site-tagline {
-    display: none;
-}
-
-.banner-next,
-.banner-prev {
     display: none;
 }
 
@@ -283,25 +293,26 @@ div.banner-image-text {
 
     .widgettitle {
         display: none;
-}
+    }
 }
 
 .site-footer {
-    ul {
+    .menu {
         margin-bottom: 2em;
         text-align: center;
 
         li {
             float: left;
-            width: 25%;
+            padding: .8em 0;
+            width: 50%;
+        }
     }
-}
 
-.copyright {
-    display: block;
-    font-weight: bold;
-    text-align: center;
-}
+    .copyright {
+        display: block;
+        font-weight: bold;
+        text-align: center;
+    }
 }
 
 @import 'product.less';
