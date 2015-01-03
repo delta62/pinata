@@ -131,50 +131,50 @@ h1, h2, h3, h4, h5, h6 {
                     top: 50%;
                     -moz-transform: translate(-50%, -50%);
                     transform: translate(-50%, -50%);
+                }
             }
         }
     }
-}
 
-div.banner-image-text {
-    position: absolute;
-}
+    div.banner-image-text {
+        position: absolute;
+    }
 
-.banner-nav {
-    float: left;
-    left: 50%;
-    position: relative;
-
-    ol {
+    .banner-nav {
         float: left;
-        left: -50%;
-        list-style-type: none;
-        padding: 0;
+        left: 50%;
         position: relative;
-    }
 
-    li {
-        float: left;
-        padding: .3em;
+        ol {
+            float: left;
+            left: -50%;
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+        }
 
-        a {
-            display: inline-block;
-            background-color: @gold;
-            border: .2em solid @gold;
-            border-radius: 2em;
-            box-shadow: 0 0 0 .2em @gold;
-            height: 2em;
-            transition: background-color .2s, box-shadow .2s;
-            width: 2em;
+        li {
+            float: left;
+            padding: .3em;
 
-            &.active {
-                background-color: @red;
-                border-color: @white;
-                box-shadow: 0 0 0 .2em @red;
+            a {
+                display: inline-block;
+                background-color: @gold;
+                border: .2em solid @gold;
+                border-radius: 2em;
+                box-shadow: 0 0 0 .2em @gold;
+                height: 2em;
+                transition: background-color .2s, box-shadow .2s;
+                width: 2em;
+
+                &.active {
+                    background-color: @red;
+                    border-color: @white;
+                    box-shadow: 0 0 0 .2em @red;
+                }
             }
         }
     }
-}
 }
 
 .promo {
@@ -185,21 +185,27 @@ div.banner-image-text {
     }
 
     .promo-thumb {
-        height: 6em;
-        margin: 0 auto;
-        overflow: hidden;
-        width: 6em;
-    }
-
-    img {
         height: 100%;
-    }
+        overflow: hidden;
+        padding-bottom: 100%;
+        position: relative;
 
-    @supports (object-fit: cover) {
-        .promo img {
-            object-fit: cover;
-            object-position: center;
+        & > a {
+            display: block;
+            height: 100%;
+            position: absolute;
             width: 100%;
+        }
+        
+        img {
+            height: 100%;
+        }
+
+        @supports (object-fit: cover) {
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
         }
     }
 
