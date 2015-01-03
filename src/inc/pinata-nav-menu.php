@@ -8,12 +8,12 @@ class Pinata_Nav_Menu extends Walker {
 
     function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class=\"sub-menu\">\n";
+        $output .= "\n$indent<ol class=\"sub-menu\">\n";
     }
 
     function end_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "$indent</ul>\n";
+        $output .= "$indent</ol>\n";
     }
 
     private function get_image($post) {

@@ -30,7 +30,7 @@
                 wp_nav_menu(array(
                     'theme_location'  => 'primary-nav',
                     'container'       => 'nav',
-                    'container_class' => 'primary-nav centering group',
+                    'container_class' => 'primary-nav',
                     'walker'          => new Pinata_Nav_Menu(),
                     'link_before'     => '<span>',
                     'link_after'      => '</span>'
